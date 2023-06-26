@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(#7597de,#2b1055,darkblue);
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 4em 60em 20em;
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "footer footer footer";
+    row-gap: 0.5rem;
+    min-height: 100vh;
+}
+
+
+header{
+    grid-area: header;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    width: 100%;
+    padding: 1em 3em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 3ch;
+    }
+
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+    border-radius: 20px;
+}
+/* END OF HEADER  */
+
+/* FIRST ROW */
+main {
+    grid-area: main;
+    display: flex;
+    margin: 2em 0 8em 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+/* SECOND ROW */
+.main2 {
+    grid-area: main2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*CARD*/
+.card{
+    background-size: cover;
+    padding: 4rem 0 0;
+    max-width: 35ch;
+    /* min-height: 15rem; */
+    max-height: 23.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 3rem 3rem 0 3rem;
+}
+
+.emb{
+    background-image: url(png/emb4.jpg);
+}
+
+.gm{
+    background-image: url(png/gm2.jpg);
+}
+
+.vida{
+    background-image: url(png/vida3.jpg);
+}
+
+.ppr{
+    background-image: url(png/pexels-rodnae-productions-5637771.jpg);
+}
+
+.edu {
+    background-image: url(png/edu7.jpg);
+}
+
+.mujer
+{
+    background-image: url(png/vida-mujer-lentes2.0.png);
+}
+
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-title{
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgba(78, 166, 239, 0.762);
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    min-height: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gm > .card-content {
+    transform:translateY(72%);
+}
+
+.emb > .card-content {
+    transform: translateY(68%);
+}
+
+.ppr > .card-content {
+    transform: translateY(70%);
+}
+
+.edu > .card-content {
+    transform: translateY(64%);
+}
+.mujer > .card-content {
+    transform: translateY(65%);
+}
+
+
+.card-content{
+    padding: 0 2.5em 3em 2.5em;
+    background: linear-gradient(
+        hsl(0 0% 10% / 0),
+        hsl(20 0% 90% / 0.2) 5%,
+        hsl(0 0% 100% / 1)
+    );
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0px;
+    transition: transform 500ms ease;
+}
+
+
+.card:hover .card-content {
+    transform: translateY(0);
+}
+
+button{
+    text-decoration: none;
+    display: inline-block;
+    background-color: cornflowerblue;
+    border-radius: 2em;
+    padding: 1em;
+    border: 0ch;
+    margin: 1.5em 0 2em 0;
+    
+}
+
+a{
+    color: azure;
+    text-decoration: none;
+}
+
+button:hover {
+    text-decoration: none;
+    background-color: skyblue;
+    color: azure;
+    transition:0.8s;
+}
+
+footer
+{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+footer .col
+{
+    padding: 5em 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .col ul
+{
+    list-style: none;
+    
+}
+
+footer .col ul li
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+
+footer .col ul li a
+{
+    color: gray;
+    text-decoration: none;
+}
+
+footer .col ul li a:hover
+{
+color: #fff;
+}
+
+footer img
+{
+max-height: 8em;
+max-width: 7em;
+}
+
+footer p
+{
+    color: #fff;
+    font-size: 1rem;
+}
+.fb
+{
+    border-radius: 50%;
+    max-height: 3em;
+    max-width: 3em;
+    margin: 1rem;
+
+}
+
+
+
+
+@media (max-width: 800px) 
+{
+body{
+    grid-template-rows: 4em 120em 20em;
+    place-items: center;
+    place-content: center;
+}
+
+header{
+    justify-content: center;
+}
+header ul li a{
+    font-size: 2ch;
+}
+
+.main2{
+    flex-direction: column;
+}
+
+.card{
+    max-width: 15rem;
+    max-height: 20rem;
+}
+
+.card > .card-content {
+    transform:translateY(0%);
+}
+.card-title{
+    font-size: 1.8ch;
+}
+.card{
+    padding: 1.5rem 0;
+}
+.card:nth-child(2){
+    font-size: 1.7ch;
+}
+.card-content button{
+    margin: 1em 0 2em 0;
+}
+footer{
+    place-content: center;
+    place-items: center;
+}
+footer .col{
+    padding: 5em 0.9rem;
+}
+}
+
+@media (max-width:600px) 
+{
+body{
+    grid-template-rows: 4em 120em 20em;
+
+}
+}

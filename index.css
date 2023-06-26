@@ -1,0 +1,604 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Raleway:wght@300&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(#2b1055,#183063,#7597de);
+        font-family: 'Raleway', Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-rows: 5em 35em 24em 50em 50em 15em;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "intro"
+        "aboutus"
+        "seg"
+        "contact"
+        "footer";
+        place-content: center;
+        place-items: center;
+        position: relative;
+        overflow-x: hidden;
+}
+
+
+header {
+    grid-area:header;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    width: 100%;
+    padding: 1em 3em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+text-decoration: none;
+padding: 6px 15px;
+color: #fff;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 700;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+    border-radius: 20px;
+}
+/* END OF HEADER */
+
+.intro {
+grid-area: intro;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: linear-gradient(#2b1055,#183063,#7597de);
+position: relative;
+width: 100%;
+padding-bottom: 3rem;
+}
+
+.intro h1 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 7rem;
+    line-height: 9rem;  
+    color: #fff;  
+    margin: 0 0 0.2em 0;
+}
+
+.intro h3
+{
+    font-size: 3rem;
+    line-height: 3rem;  
+    color: #fff;  
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    border: none;
+}
+
+.intro p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.intro p button
+{
+   min-width: 12em;
+   min-height: 5rem;
+   text-align: center;
+   border-radius: 2.5em;
+   background-color: rgba(0,0, 0, 0.1);
+   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0,25);
+   border-top: 1px solid #6c63ff;
+   border-right: 1px solid rgba(255, 255, 255, 0.5);
+   backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(8px);
+}
+
+.intro p button a 
+{
+    text-decoration: none;
+    font-size: 3.5ch;
+}
+
+.intro p button:hover 
+{
+    background-color: #203F83;
+    color: azure;
+    border-radius: 3em;
+    transition:0.8s;
+    scroll-behavior: smooth;
+}
+/* END OF FIRST PART */
+
+.about-us {
+    grid-area: aboutus;
+    display: grid;
+   grid-template-rows: 8em 8em 8em;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: "with1 with2"
+                        "mision1 mision2"
+                        "vision1 vision2";
+    width: fit-content;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin: 0;
+}
+
+.with1 {
+    grid-area: with1;
+    background: #EFF3FB;
+    color: #2b1055;
+}
+
+.with2 {
+    grid-area: with2;
+    background: #fff;
+    color: #2b1055;
+
+}
+
+.logo {
+    max-height: 10em;
+    max-width: 15em;
+}
+
+span {
+    font-family: sans-serif;
+}
+
+.mision1 {
+    grid-area: mision1;
+    background: #2b1055;
+    color: #fff;
+}
+
+.mision2 {
+    grid-area: mision2;
+    background: #331467;
+    color: #fff;
+}
+
+.vision1 {
+    grid-area: vision1;
+    background: #1C3773;
+    color: #fff;
+}
+
+.vision2{
+    grid-area: vision2;
+    background: #203F83;
+    color: #fff;
+}
+/* END OF ABOUT US GRID */
+
+.seguros-container{
+    grid-area: seg;
+    display: grid;
+    grid-template-rows: 20em 30em;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "seguros"
+    "seguros1";
+    padding-bottom: 2rem;
+    place-content: center;
+}
+
+.seguros {
+    grid-area: seguros;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    padding: 5em;
+}
+
+.seguros p
+{
+    color: #fff;
+    font-size: 2ch;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.seguros h4 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.button1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 15em;
+    padding: 1em;
+    border-radius: 0.5em;
+    background: skyblue;
+    border: 0;
+}
+
+.button1:hover {
+    text-decoration: none;
+    background-color: #203F83;
+    color: azure;
+    border-radius: 1.5em;
+    transition:0.8s;
+}
+
+/* START OF CARD SECTION */
+
+
+.seguros1 {
+font-family: 'Raleway', Helvetica, sans-serif;
+grid-area: seguros1;
+display: inline-flex;
+justify-content: space-around;
+flex-wrap: wrap;
+min-width: 100%;
+max-height: 45em;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 8em 4em;
+    grid-template-columns: 8em;
+    grid-template-areas: "img"
+                         "txt";
+    max-height: 13em;
+    max-width: 10rem;
+    background: #fff;
+    border-radius: 0.5em;
+    margin: 1em;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    
+}
+
+.card-image {
+    grid-area: img;
+
+   width: 100%;
+   aspect-ratio: 2/2;
+}
+
+
+.card-text {
+    text-decoration: none;
+    grid-area: txt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.25rem;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: black;
+}
+
+/*CONTACT SECTION*/
+.contact-container {
+    grid-area: contact;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:#2b1055;
+    box-sizing: border-box;
+    min-height: 30em;
+}
+
+.contact-title
+{
+grid-area: c-title;
+display: flex;
+justify-content: center;
+align-items: center;
+text-transform: uppercase;
+margin-top: 1em;
+padding-top: 3rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 5ch;
+    color: #fff;
+}
+
+.form-contact{
+    grid-area: forms;
+    padding-top: 4.5em;
+}
+
+.contact1
+{
+    grid-area: contact1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+}
+
+.contact1 div img
+{
+    min-height: 4rem;
+    min-width: 3rem;
+    margin: 1rem;
+}
+
+.contact1 div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contact1 div button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 8rem;
+    min-height: 4rem;
+    margin-left: 2.5rem;
+    background-color:  white;
+    border-radius: 1.5em;
+    border: none;
+}
+
+.contact1 div button:hover
+{
+border-radius: 2.5em;
+transition:0.8s;
+}
+
+
+.contact1 div button a
+{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    padding: 1rem;
+    color: #2b1055;
+}
+
+footer
+{
+    grid-area: footer;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.footer-div {
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 15em;
+    background-color: black;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+footer .col
+{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .col ul
+{
+    list-style: none;
+    
+}
+
+footer .col ul li a
+{
+    color: gray;
+    text-decoration: none;
+}
+
+footer .col ul li a:hover
+{
+color: #fff;
+}
+
+footer img
+{
+max-height: 8em;
+max-width: 7em;
+}
+.fb
+{
+    border-radius: 50%;
+    max-height: 3em;
+    max-width: 3em;
+    margin: 1rem;
+
+}
+
+/* ANIMATION WITH JS */
+
+.hidden {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.card:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.card:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.card:nth-child(4){
+    transition-delay: 600ms;
+}
+
+.card:nth-child(5){
+    transition-delay: 800ms;
+}
+
+.card:nth-child(6){
+    transition-delay: 1000ms;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+@media(max-width:800px){
+     body{
+
+        grid-template-rows: 5em 20em 25em 65em 97em 15em;
+        text-align: center;
+    } 
+
+    header{
+        justify-content: center;
+    }
+    .intro{
+        width: 100%;
+        min-height: 20em;
+    }
+
+    .intro h1{
+        font-size:5ch;
+        position: absolute;
+        top: 0;
+        margin-bottom: 2rem;
+        line-height: 6rem;
+            }
+
+    .intro h3 {
+        font-size: 1rem;
+        line-height: 6rem;
+        text-align: center;
+        letter-spacing: 1.1rem;
+        position: absolute;
+        top: 3rem;
+    }
+
+    .intro p button{
+        min-height: 4rem;
+    }
+
+    .col {
+        font-size: 0.8rem;
+        padding: 0 1rem;
+    }
+
+    .about-us {
+        width: min-content;
+        grid-template-rows: 7em 7em 7em;
+       grid-template-columns: 1fr 1fr;
+    }
+    .logo{
+        max-height: 3rem;
+    }
+    .seguros-container{
+        grid-template-rows: 15em 50em;
+        max-width: min-content;
+    }
+
+    .seguros{
+        max-width: min-content;
+    }
+
+    .seguros h4 {
+        font-size: 2rem;
+      }
+
+    .seguros1{
+        justify-content: center;
+        margin: 0 1rem;
+    }
+        
+    .card {
+            grid-template-columns: 7.5em;
+            background: #fff;
+            border-radius: 0.5em;
+            margin: 0.5rem;
+        }
+
+    .contact-container{
+        width: min-content;
+        justify-content: center;
+        gap: 0.9rem;
+    }
+
+    .contact1{
+        margin: 0;
+    }
+
+    .contact-title{
+            font-size: 2.5rem;
+        
+        }
+    .contact1 div img
+    {
+    min-height: 3rem;
+    min-width: 3rem;
+    margin: 1rem;
+    }
+    .form-contact{
+        padding-top: 0;
+    }
+    .form-contact iframe{
+        width: 23rem;
+        height: 74rem;
+    }
+}
